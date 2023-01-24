@@ -1,8 +1,8 @@
 * {
-    font-family: Arial, Helvetica, sans-serif}
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 body {
-    padding: 0;
     margin: 0;
 }
 
@@ -18,17 +18,19 @@ header h1 {
     padding: 10px 10px 10px 100px;
 }
 
-header nav {
+header ul {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 header a {
     color: lightgreen;
     text-decoration: none;
     font-size: large;
-    padding: 3px 3px;
-    margin: 0px 10px;
+    padding: 0 4px;
+    margin: 10px;
+    line-height: 35px;
     border-bottom: solid 3px;
     border-bottom-color: lightgreen;
 }
@@ -49,24 +51,21 @@ header a {
     color: lightgreen;
 }
 
+main section {
+    display: flex;
+    margin-top: 30px;
+}
 
 main h1 {
-    display: inline;
-    min-width: 15%;
-    margin: 0 0 0 100px;
-    padding-right: 10px;
+    padding: 0 10px 0 10%;
+    margin: 0;
+    min-width: 11rem;
     text-align: right;
-    font-size: 350%;
+    font-size: xxx-large;
     color: darkgreen;
     border-right-style: solid;
     border-right-width: 5px;
     border-right-color: darkgreen;
-}
-
-main section {
-    display: flex;
-    margin-top: 30px;
-
 }
 
 #about-me-section article {
@@ -107,16 +106,16 @@ main section {
 
 #sample-work-section div {
     height: 75px;
-    width: 45%;
-    margin: 2%;
+    width: 46%;
+    margin: 5px;
     border-style: solid;
     border-width: 3px;
     border-color: aqua;
-    filter: grayscale(50%);
+    filter: grayscale(70%);
 }
 
 #sample-work-section div:nth-child(1) {
-    margin: 0 30px 0 30px;
+    margin: 0 2%;
     height: 300px;
     width: 100%;
     filter: grayscale(70%);
@@ -149,6 +148,7 @@ main section {
 #contact-section article {
     display: flex;
     align-items: center;
+    width: 200%;
 }
 
 #contact-section ul {
@@ -161,6 +161,7 @@ main section {
     text-decoration: none;
     color: darkgreen;
     padding: 3px;
+    margin:4px;
     border-bottom-style: solid;
     border-bottom-width: 3px;
     border-bottom-color: darkgreen;
@@ -175,4 +176,35 @@ footer{
     margin-top: 30px;
     height: 100px;
     background-color: gray;
+}
+
+@media screen and (max-width: 880px) {
+    #sample-work-section div {
+        height: 75px;
+        width: 100%;
+        margin: 2%;
+        border-style: solid;
+        border-width: 3px;
+        border-color: aqua;
+        filter: grayscale(70%);
+    }
+
+    /* contact-me-section article break */
+    #contact-section ul {
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .header-img h2{
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width:452px) {
+    /* header break */
 }
