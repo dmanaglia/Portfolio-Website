@@ -85,36 +85,43 @@ main h1 {
 }
 
 #project-1 {
-    background-image: url(../images/green-nums.jpeg);
+    background-image: url(../images/conference.jpeg);
+    background-size: 100%;
+    background-position: bottom;
+
 }
 
 #project-2 {
-    background-image: url(../images/green-nums.jpeg);
+    background-image: url(../images/chalk.jpeg);
+    background-position: bottom;
 }
 
 #project-3 {
-    background-image: url(../images/green-nums.jpeg);
+    background-image: url(../images/brick.jpeg);
+    background-size: 40%;
 }
 
 #project-4 {
-    background-image: url(../images/green-nums.jpeg);
+    background-image: url(../images/waterfall.jpeg);
+    background-size: 100%;
 }
 
 #project-5 {
-    background-image: url(../images/green-nums.jpeg);
+    background-image: url(../images/code.jpeg);
+    background-size: 100%;
 }
 
-#sample-work-section div {
+#sample-work-section a {
     height: 75px;
     width: 46%;
     margin: 5px;
     border-style: solid;
-    border-width: 3px;
+    border-width: 5px;
     border-color: aqua;
     filter: grayscale(70%);
 }
 
-#sample-work-section div:nth-child(1) {
+#sample-work-section a:nth-child(1) {
     margin: 0 2%;
     height: 300px;
     width: 100%;
@@ -124,12 +131,12 @@ main h1 {
 #sample-work-section h3, #sample-work-section p {
     padding: 10px;
     margin: 0;
-    width: 80px;
+    width: 200px;
     background-color: aqua;
     line-height: 0;
 }
 
-#sample-work-section div:hover {
+#sample-work-section a:hover {
     filter: grayscale(0%);
 }
 
@@ -167,7 +174,8 @@ main h1 {
     border-bottom-color: darkgreen;
 }
 
-a:hover {
+#contact-section a:hover,
+header a:hover {
     font-weight: bolder;
     border-bottom-width: 5px;
 }
@@ -179,7 +187,7 @@ footer{
 }
 
 @media screen and (max-width: 880px) {
-    #sample-work-section div {
+    #sample-work-section a {
         height: 75px;
         width: 100%;
         margin: 2%;
@@ -199,9 +207,18 @@ footer{
 
 }
 
-@media screen and (max-width:550px) {
-    .header-img h2{
-        margin-right: 0px;
+@media screen and (max-width:553px) {
+    .header-img{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-img h2 {
+        text-align: center;
+        margin: 200px 0 0 0;
+        padding-bottom: 0;
+        height: fit-content;
     }
 }
 
