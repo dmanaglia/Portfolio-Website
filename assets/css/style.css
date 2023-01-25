@@ -1,94 +1,165 @@
+/* add comments */
+
+/* variables for commonly used elements */
+:root {
+    --mydarkgreen: darkgreen;
+    --mylightgreen: lightgreen;
+    --mygray: rgb(61, 57, 57);
+    --myflex: flex;
+}
+
+/* font used for entire text and backups in case users system cannot load Arial */
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* gets header and footer to touch the corners of the page */
 body {
     margin: 0;
 }
 
+/* sets header to desired color and prepares the spacing for the two sections h1 and nav so they are seperated on either side of header */
+/* ensures all the content will remain in the vertical center of the header if the screen width were to decrease */
 header {
-    display: flex;
+    display: var(--myflex);
     justify-content: space-between;
-    background-color: rgb(61, 57, 57);
+    align-items: center;
+    background-color: var(--mygray);
 }
 
+/* sets up extra padding for the h1 on the left side of the header so it extends to the edge of the page */
 header h1 {
-    background-color: lightgreen;
-    color: rgb(61, 57, 57);
+    background-color: var(--mylightgreen);
+    color: var(--mygray);
     padding: 10px 10px 10px 100px;
 }
-
+/* sets up the unordered list within the nav element to be flex so the list items will wrap if display shrinks */
 header ul {
-    display: flex;
+    display: var(--myflex);
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
+/* adds styling and spacing to the links on the right side of the header */
 header a {
-    color: lightgreen;
+    color: var(--mylightgreen);
     text-decoration: none;
     font-size: large;
     padding: 0 4px;
     margin: 10px;
     line-height: 35px;
     border-bottom: solid 3px;
-    border-bottom-color: lightgreen;
+    border-bottom-color: var(--mylightgreen);
 }
 
+/* sets img link and size for the image below the header element and above main */
 .header-img {
     height: 300px;
     background-image: url(../images/green-nums.jpeg);
 }
 
+/* sets style and spacing for the subtitle (h2) that goes on top of the .header-img */
 .header-img h2 {
-    position: relative;
-    display: inline;
     float: right;
     margin-top: 230px;
     margin-right: 100px;
     padding: 8px;
     background-color: black;
-    color: lightgreen;
+    color: var(--mylightgreen);
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--mylightgreen);
 }
 
+/* sets each section in the main element to be flex so they are all on their own line with 30px of space on top each section */
+/* each section is the horizal section that contains both the h1 and the article */
+/* there are 3 section: #about-me-section, #sample-work-section, #contact-me-section all have this same base style but differ in their contents */
 main section {
-    display: flex;
+    display: var(--myflex);
     margin-top: 30px;
 }
 
+/* sets up the style and spacing of each h1 in the main section */
+/* each h1 is on the left side of the page */
+/* each h1 right border needs to be in alignment */
 main h1 {
-    padding: 0 10px 0 10%;
+    /* creates 10px of space between txt and right border and a relative amount of room from the edge of the page */
+    padding: 0 10px 0 10%; 
     margin: 0;
+    /* ensures all h1 borders are in alignment */
     min-width: 11rem;
     text-align: right;
     font-size: xxx-large;
-    color: darkgreen;
+    color: var(--mydarkgreen);
     border-right-style: solid;
     border-right-width: 5px;
-    border-right-color: darkgreen;
+    border-right-color: var(--mydarkgreen);
 }
 
+/* give the #about-me-section paragraphs 30px room on the left and right */
 #about-me-section article {
-    display: inline;
     margin: 0 30px;
 }
 
+/* making sure the first paragraph has no room on top and the others are normaly spaced*/
 #about-me-section p:nth-child(1) {
     margin-top: 0;
 }
 
+/* sets the article (right hand portion) of #sample-work-section to be flex */
+/* wrap so the contained elements are not all on the same line */
+/* centers all contained elements within the article */
 #sample-work-section article  {
-    display: flex;
+    display: var(--myflex);
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%
 }
 
+/* creates style, spacing and sizing for every link in the #sample-work-section */
+#sample-work-section a {
+    height: 75px;
+    width: 46%;
+    margin: 5px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--mylightgreen);
+    /* grayscale adjusts the color of each link so that the color is dull */
+    filter: grayscale(70%);
+}
+
+/* changes the sizing and spacing for the FIRST link in the #sample-work-section so that is it bigger than the rest */
+#sample-work-section a:nth-child(1) {
+    margin: 0 2%;
+    height: 300px;
+    width: 100%;
+}
+
+/* sets the syle, spacing and sizing for each all of the added info for each link in the #sample-work-section*/
+/* the added info has a title (h3) and some text (p), I adjusted line-height to merge these boxed so they appear as one solid element */
+#sample-work-section h3, #sample-work-section p {
+    padding: 10px;
+    margin: 0;
+    width: 165px;
+    background-color: var(--mylightgreen);
+    line-height: 0;
+}
+
+/* adjusts the spacing of all the added info for each link so it' moved down to almost the bottom of the link */
+#sample-work-section h3 {
+    margin-top: 28px;
+}
+
+/* changes the spacing for the first header so that it is moved down further since the first link is larger than the others */
+#project-1 h3:nth-child(1) {
+    margin-top: 250px;
+}
+
+/* sets the images for each of the project link and adjusts the image sizing for asthetic purposes */
 #project-1 {
     background-image: url(../images/conference.jpeg);
-    background-size: 100%;
-    background-position: bottom;
-
+    background-size: cover;
+    background-position: center;
 }
 
 #project-2 {
@@ -111,117 +182,143 @@ main h1 {
     background-size: 100%;
 }
 
-#sample-work-section a {
-    height: 75px;
-    width: 46%;
-    margin: 5px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: aqua;
-    filter: grayscale(70%);
-}
-
-#sample-work-section a:nth-child(1) {
-    margin: 0 2%;
-    height: 300px;
-    width: 100%;
-    filter: grayscale(70%);
-}
-
-#sample-work-section h3, #sample-work-section p {
-    padding: 10px;
-    margin: 0;
-    width: 200px;
-    background-color: aqua;
-    line-height: 0;
-}
-
-#sample-work-section a:hover {
-    filter: grayscale(0%);
-}
-
-#project-1 h3:nth-child(1) {
-    margin-top: 250px;
-}
-
-#sample-work-section h3 {
-    margin-top: 28px;
-}
-
-#contact-section article, #contact-section ul {
-    width: 100%;
-}
-
+/* sets the article in #contact-section to be flexable so that the contained unordered list will be centered vertically */
+/* ensures the width of the article will take up the entire right side of the #contact-section */
 #contact-section article {
-    display: flex;
+    display: var(--myflex);
     align-items: center;
     width: 200%;
 }
 
+/* makes sure the unordered list is taking up the entire width of the container article */
+/* sets the unordered list to be flexible so the contained ancour elements can be spaced evenly and wrapped if the screen shrinks */
+/* gets rid of extra spacing from default unordered list */
 #contact-section ul {
-    padding-left: 0;
-    display: flex;
+    width: 100%;
+    display: var(--myflex);
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-left: 0;
 }
-
+ /* sets the style and spacing for each link in the #contact-me section */
 #contact-section a {
     text-decoration: none;
-    color: darkgreen;
+    color: var(--mydarkgreen);
+    /* I want the bottom border to be a little longer than the text */
     padding: 3px;
+    /* I want the links to still be slightly sepereated if the screen shinks */
     margin:4px;
     border-bottom-style: solid;
     border-bottom-width: 3px;
-    border-bottom-color: darkgreen;
+    border-bottom-color: var(--mydarkgreen);
 }
 
+/* creates the psuedo class hover to change the boldness of the links in the header and in the #contact-section */
+/* changes both the text boldness and the border width */
 #contact-section a:hover,
 header a:hover {
     font-weight: bolder;
     border-bottom-width: 5px;
 }
 
+/* a different psueso class hover which removes the grayscale initially set to the image links in the #sample-work-section */
+#sample-work-section a:hover {
+    filter: grayscale(0%);
+}
+
+/* creates an empty footer 100px tall with the same color as the header */
+/* creates a bit of room between the last section in the main element */
 footer{
     margin-top: 30px;
     height: 100px;
-    background-color: gray;
+    background-color: var(--mygray);
 }
 
+/* most media queries resolve specific breaks in the code when the screen shrinks */
+
+/* at about 875px screen width the project image links become to large to be placed side by side */
+/* this changes every link to take up the entire article width */
+/* the first project is still taller, they rest are now on their own line because the container is flexable and it wraps */
 @media screen and (max-width: 880px) {
     #sample-work-section a {
-        height: 75px;
         width: 100%;
-        margin: 2%;
-        border-style: solid;
-        border-width: 3px;
-        border-color: aqua;
-        filter: grayscale(70%);
     }
-
-    /* contact-me-section article break */
-    #contact-section ul {
-        padding-left: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
 }
 
-@media screen and (max-width:553px) {
+/* when the screen width shinks to about 550px the subtitle on the image becomes too large (with the origin margin-left)*/
+/* this readjusted the spacing of that subtitle */
+@media screen and (max-width:556px) {
+    /* header-img is now flex and contained elements will be centered on the image */
+    /* the contained element will now wrap if the screen shrinks further */
     .header-img{
-        display: flex;
+        display: var(--myflex);
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    /* the subtitle text itself becomes centered in the h2 element and any exra height is removed */
+    /* shifts the subtitle down to the bottom of the image */
     .header-img h2 {
         text-align: center;
         margin: 200px 0 0 0;
-        padding-bottom: 0;
         height: fit-content;
     }
 }
 
-@media screen and (max-width:452px) {
-    /* header break */
+/* when the screen width shinks to about 500px the right side of the page is too narrow and hard to read */
+/* this adjusts all the h1 headers in the main section to take up less space on the left hand side */
+/* this frees up space for the articles within each section to expand */
+@media screen and (max-width:508px) {
+    main h1 {
+        font-size: x-large;
+        padding-left: 0;
+        min-width: 6rem;
+    }
 }
+
+/* when the screen width shrinks to about 400px header contents are too large and do not look good */
+@media screen and (max-width:407px) {
+    /* this reorients the header to have vertical elements rather than side by side */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* readjusts sizing for new h1 location */
+    header h1 {
+        padding: 10px
+    }
+    /* readjusts spacing for new unordered list location */
+    header ul {
+        padding: 0;
+    }
+}
+
+/* when the screen width shrinks to about 330px the links in the contact section article become too large and do not look good */
+/* also the articles on the right side of the page are again too narrow and are hard to read */
+@media screen and (max-width:340px) {
+    /* readjusts the unordered lists orientation to be in column form and aligns all contained elements to be in the center */
+    #contact-section ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* adjusts each links size to look better */
+    #contact-section a {
+        width: fit-content;
+    }
+    /* this adjusts all the h1 headers in the main section to take up less space on the left hand side */
+    /* this frees up space for the articles within each section to expand */
+    main h1 {
+        font-size: medium;
+        min-width: 3.5rem;
+    }
+}
+
+/* the screen breaks at this point so again readjust the all headers (h1) in the main section to free up space */
+@media screen and (max-width:300px) {
+    main h1 {
+        font-size: small;
+        min-width: 2.5rem;
+        border-width: 2px;
+    }
+}
+
+/* screen breaks around a width of 275px but since the galaxy fold is the smallest at 280px screen width that should be okay */
