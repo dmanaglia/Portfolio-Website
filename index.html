@@ -12,35 +12,47 @@
 <body>
 
     <header>
+        <!-- the primary header on top left of page -->
         <h1>Daniel Managlia</h1>
         <nav>
             <ul>
+                <!-- nav section that contains working links to other sections on the page and a link to resume which opens a new tab -->
                 <a href="#about-me-section">About Me</a>
                 <a href="#sample-work-section">Work</a>
                 <a href="#contact-section">Contact Me</a>
-                <a href="">Resume</a>
+                <a href="./assets/images/Daniel Managlia Resume 2021.pdf" target="_blank">Resume</a>
             </ul>
         </nav>
     </header>
 
+    <!-- the .header-img is slightly below the header and has a subtitle that hovers over the header -->
     <section class="header-img">
         <h2>Building A Career One Line At A Time!</h2>
     </section>
 
+    <!-- main section spanning most of the webpage -->
+    <!-- main has 3 child sections which are all individually flexable and contain a h1 and a article -->
+    <!-- each article content varies based on section -->
     <main>
         <section id="about-me-section">
+            <!-- h1 goes on the left so it is first -->
             <h1>About Me</h1>
+            <!-- article goes on the right so it is second -->
             <article>
+                <!-- simple info about me -->
                 <p>I am a recent graduate from the University of San Francisco looking to begin a web developement career! I earned my bachelors degree in Theology and Religious studies, a field in which I have honed my logical thinking which has been quite adventageous in my studied of computer science thus far.</p>
                 <p>I have taken many courses in both highschool and college on Java, Python and R, as well as my most recent endeavor: a graduate program through Northwestern University specificly focusing on webdevelopement. Currently I am learned in all prior languages as well as HTML, CSS and JavaScript.</p>
                 <p>I have found programming to be not only rewarding but an extremly enjoyable process of peicing together a logical response to a given request or problem. I am eager to expand my knowledge and learn React and React Native to ensure I am up to date with the most common practices of the web developement field. I hope to one day soon grow this passion into a full fledged career to continue my learning through hands on experience.</p>
-
             </article>
         </section>
         <section id="sample-work-section">
             <h1>Work</h1>
+            <!-- this article contains 5 different image links -->
             <article>
+                <!-- images ids are defined on lines 159-183 of style sheet -->
                 <a id="project-1" href="https://dmanaglia.github.io/Horiseon_Refactor/" target="_blank">
+                    <!-- each image has added info, namely the title of the project and the code used in the project -->
+                    <!-- this info goes on top of the image link -->
                     <h3>Horiseon Refactor</h3>
                     <p>HTML/CSS</p>
                 </a>
@@ -64,19 +76,23 @@
         </section>
         <section id="contact-section">
             <h1>Contact Me</h1>
+            <!-- the contact-section article is just an unordered list of standard links -->
             <article>
                 <ul>
-                    <a href="">847-899-1591</a>
+                    <!-- phone and email links are working and will pull up phone or email respectively -->
+                    <a href="tel:8478991591">Call at 847-899-1591</a>
                     <a href="mailto:ddsmm.managlia@gmail.com">ddsmm.managlia@gmail.com</a>
                     <a href="https://github.com/dmanaglia" target="_blank">GitHub</a>
                     <a href="https://www.linkedin.com/in/daniel-managlia-3aa195149" target="_blank">LinkedIn</a>
-                    <a href="">Spotify</a>
+                    <a href="./assets/images/Daniel Managlia Resume 2021.pdf" target="_blank">Resume</a>
                 </ul>
             </article>
         </section>
     </main>
 
-    <footer></footer>
+    <!-- footer is an empty gray block -->
+    <footer>
+    </footer>
 
 </body>
 </html>
