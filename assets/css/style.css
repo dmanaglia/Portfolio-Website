@@ -18,7 +18,7 @@ body {
     margin: 0;
 }
 
-/* sets header to desired color and prepares the spacing for the two sections h1 and nav so they are seperated on either side of header */
+/* sets header to desired color and prepares the spacing for the three sections h1, avatar and nav so they are seperated evenly */
 /* ensures all the content will remain in the vertical center of the header if the screen width were to decrease */
 header {
     display: var(--myflex);
@@ -33,6 +33,18 @@ header h1 {
     color: var(--mygray);
     padding: 10px 10px 10px 100px;
 }
+
+/* a small circular picture of myself, image can be replaces with a different style avatar */
+.avatar {
+    height: 90px;
+    width: 90px;
+    border-radius: 150px;
+    background-image: url(../images/selfie.jpg);
+    background-size: 200%;
+    background-position-x: 45%;
+    background-position-y: 70%;
+}
+
 /* sets up the unordered list within the nav element to be flex so the list items will wrap if display shrinks */
 header ul {
     display: var(--myflex);
@@ -237,12 +249,27 @@ footer{
 /* most media queries resolve specific breaks in the code when the screen shrinks */
 
 /* at about 875px screen width the project image links become to large to be placed side by side */
-/* this changes every link to take up the entire article width */
+/* this changes every project link to take up the entire article width in the #sample-work-section */
 /* the first project is still taller, they rest are now on their own line because the container is flexable and it wraps */
+/* header contents are also too large and do not look good */
 @media screen and (max-width: 880px) {
     #sample-work-section a {
         width: 100%;
     }
+    /* this reorients the header to have vertical elements rather than side by side */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* readjusts sizing for new h1 location */
+    header h1 {
+        padding: 10px
+    }
+    /* readjusts spacing for new unordered list location */
+    header ul {
+        padding: 0;
+    }
+
 }
 
 /* when the screen width shinks to about 550px the subtitle on the image becomes too large (with the origin margin-left)*/
@@ -272,23 +299,6 @@ footer{
         font-size: x-large;
         padding-left: 0;
         min-width: 6rem;
-    }
-}
-
-/* when the screen width shrinks to about 400px header contents are too large and do not look good */
-@media screen and (max-width:407px) {
-    /* this reorients the header to have vertical elements rather than side by side */
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-    /* readjusts sizing for new h1 location */
-    header h1 {
-        padding: 10px
-    }
-    /* readjusts spacing for new unordered list location */
-    header ul {
-        padding: 0;
     }
 }
 
