@@ -225,12 +225,17 @@ main h1 {
     border-bottom-color: var(--mydarkgreen);
 }
 
-/* creates the psuedo class hover to change the boldness of the links in the header and in the #contact-section */
+/* creates the psuedo class hover to change the boldness of the links in the header */
 /* changes both the text boldness and the border width */
-#contact-section a:hover,
-header a:hover {
+#contact-section a:hover {
     font-weight: bolder;
     border-bottom-width: 5px;
+}
+
+/* creates a psuedo class that changes the color of the links in the nav in the header when they are hovered over */
+header a:hover {
+    color: yellow;
+    border-bottom-color: yellow;
 }
 
 /* a different psueso class hover which removes the grayscale initially set to the image links in the #sample-work-section */
