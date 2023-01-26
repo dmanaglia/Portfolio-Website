@@ -18,15 +18,17 @@ No installation necessary just click the link below to view!
 
 ## Usage
 
-In webpage header, hover over any link and the text will become bold and the underline will be bolder (shown below). The first three links will skip to their respective section on the webpage. The resume link opens a new tab to view a pdf copy of my resume.
+In webpage header, hover over any link and the text will become yellow (shown below). The first three links will skip to their respective section on the webpage. The resume link opens a new tab to view a pdf copy of my resume.
+
+In the main section of the webpage you will find information about me, my previous work projects and a section with various ways to contact me.
 
 ![Webpage Header](./assets/images/Screenshot1.png)
 
-In the main section of the webpage you will find information about me, my previous work projects and a section with various ways to contact me. In the previous work section you will see that by hovering over any image link the image color will be restored. Clicking on these links directs you to the live link of that project.
+In the previous work section you will see that by hovering over any image link the image color will be restored. Clicking on these links directs you to the live link of that project.
 
 ![Webpage Header](./assets/images/Screenshot2.png)
 
-In the contact section all links are active including the phone number and email and will also become bold if you hover over them. If you are viewing the page on a phone or mac, you will be able to click on the phone number to call me and leave a message. The same applies for the email; the link will automatically pull a new email draft addressed to my email. The GitHub and LinkedIn links will direct you to my profile on those website and lastly the resume is yet another link to view my resume as a pdf. 
+In the contact section all links are active including the phone number and email and will become bold if you hover over them. If you are viewing the page on a phone or mac, you will be able to click on the phone number to call me and leave a message. The same applies for the email; the link will automatically pull a new email draft addressed to my email. The GitHub and LinkedIn links will direct you to my profile on those website and lastly the resume is yet another link to view my resume as a pdf. 
 
 ![Webpage Header](./assets/images/Screenshot3.png)
 
