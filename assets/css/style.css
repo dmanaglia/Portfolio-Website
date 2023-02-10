@@ -169,7 +169,7 @@ main h1 {
 
 /* sets the images for each of the project link and adjusts the image sizing for asthetic purposes */
 #project-1 {
-    background-image: url(../images/conference.jpeg);
+    background-image: url(../images/music-notes.avif);
     background-size: cover;
     background-position: center;
 }
@@ -180,8 +180,9 @@ main h1 {
 }
 
 #project-3 {
-    background-image: url(../images/brick.jpeg);
-    background-size: 40%;
+    background-image: url(../images/conference.jpeg);
+    background-size: cover;
+    background-position: center;
 }
 
 #project-4 {
