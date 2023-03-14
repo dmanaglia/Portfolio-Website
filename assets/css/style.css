@@ -18,6 +18,10 @@ body {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* sets header to desired color and prepares the spacing for the three sections h1, avatar and nav so they are seperated evenly */
 /* ensures all the content will remain in the vertical center of the header if the screen width were to decrease */
 header {
@@ -186,7 +190,7 @@ main h1 {
 }
 
 #project-4 {
-    background-image: url(../images/waterfall.jpeg);
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20191106/pngtree-blue-film-film-curled-film-movie-film-and-television-works-image_321322.jpg);
     background-size: 100%;
 }
 
